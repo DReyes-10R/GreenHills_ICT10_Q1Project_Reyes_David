@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Café de Reyes</title>
+    <!-- PyScript & Bootstrap -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <span class="navbar-brand">
+            <img src="https://cdn-icons-png.flaticon.com/512/563/563991.png" alt="Restaurant Icon" style="width:60px;">
+            Café de Reyes
+        </span>
+        <ul class="navbar-nav d-flex flex-row gap-3">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#order">Order</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    <section id="home" class="tab-section">
+        <div class="header text-center">
+            <img src="https://cdn-icons-png.flaticon.com/512/563/563991.png" alt="Restaurant Icon" style="width:120px;">
+            <h1 id="restaurant"></h1>
+            <h5 id="owner"></h5>
+            <p id="year"></p>
+        </div>
+        <div class="menu-table">
+            <h4>Menu Pricelist</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Price (₱)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Steak frites</td><td>₱125.00</td></tr>
+                    <tr><td>Croissant</td><td>₱150.00</td></tr>
+                    <tr><td>Pasta</td><td>₱120.00</td></tr>
+                    <tr><td>French Fries</td><td>₱85.00</td></tr>
+                    <tr><td>Iced Tea/Black Coffee</td><td>₱75.00</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="info-section text-center">
+            <p id="hours"></p>
+            <p id="delivery">Free delivery within 3km.</p>
+            <p id="allergens">Allergen Info: Please contact staff for food allergies.</p>
+        </div>
+    </section>
+
+    <!-- ORDER TAB -->
+    <section id="order" class="tab-section">
+        <div class="order-form row justify-content-center align-items-start p-4" style="background:#fffaf0;">
+    <!-- Menu -->
+    <div class="col-md-4">
+        <h5 class="mb-3" style="color:#2563eb;font-weight:bold;">Menu:</h5>
+        <div class="menu-list">
+            <div class="d-flex align-items-center mb-3">
+                <img src="https://maldonsalt.com/wp-content/uploads/2024/12/MALDON_NOV24_2333-scaled.jpg" alt="Steak frites" width="90" class="me-2">
+                <div>
+                    <label class="form-check-label" for="menu1">Steak frites</label>
+                    <span class="ms-2 text-primary fw-bold">₱125.00</span>
+                    <input class="form-check-input ms-2" type="checkbox" value="125.00" id="menu1">
+                </div>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+                <img src="https://delishglobe.com/wp-content/uploads/2024/11/Croissants-article.png" alt="Croissant" width="90" class="me-2">
+                <div>
+                    <label class="form-check-label" for="menu2">Croissant</label>
+                    <span class="ms-2 text-primary fw-bold">₱150.00</span>
+                    <input class="form-check-input ms-2" type="checkbox" value="150.00" id="menu2">
+                </div>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtGxJQNLQ_tpfDqgGfFpEARarc7qNGTDVEYg&s" alt="Pasta" width="48" class="me-2">
+                <div>
+                    <label class="form-check-label" for="menu3">Pasta</label>
+                    <span class="ms-2 text-primary fw-bold">₱120.00</span>
+                    <input class="form-check-input ms-2" type="checkbox" value="120.00" id="menu3">
+                </div>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+                <img src="https://static01.nyt.com/images/2018/09/16/magazine/16mag-eat/16mag-eat-jumbo.png" alt="French Fries" width="48" class="me-2">
+                <div>
+                    <label class="form-check-label" for="menu4">French Fries</label>
+                    <span class="ms-2 text-primary fw-bold">₱85.00</span>
+                    <input class="form-check-input ms-2" type="checkbox" value="85.00" id="menu4">
+                </div>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+                <img src="https://cornercoffeestore.com/wp-content/uploads/2022/07/iced-tea-vs-black-coffee.jpg" alt="Iced Tea/Black Coffee" width="48" class="me-2">
+                <div>
+                    <label class="form-check-label" for="menu5">Iced Tea/Black Coffee</label>
+                    <span class="ms-2 text-primary fw-bold">₱75.00</span>
+                    <input class="form-check-input ms-2" type="checkbox" value="75.00" id="menu5">
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <div class="col-md-6">
+        <h4 class="mb-3 text-center" style="color:#0c0c0c;font-weight:bold;">Order Here</h4>
+         <form id="orderForm">
+            <div class="mb-3">
+                <label for="custName" class="form-label fw-bold" style="color:#0a0a0a;">Customer Name:</label>
+                <input type="text" id="custName" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="custAddress" class="form-label fw-bold" style="color:#000000;">Address:</label>
+                <input type="text" id="custAddress" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="custContact" class="form-label fw-bold" style="color:#000000;">Contact Number:</label>
+                <input type="text" id="custContact" class="form-control" required>
+            </div>
+        <div class="text-center">
+                <button type="button" class="btn btn-primary px-5 mt-2" py-click="process_order">Create Order</button>
+            </div>
+        </form>
+    </div>
+</div>
+    <div id="orderSummary" class="bg-white p-4 rounded mt-3" style="max-width:700px;margin:auto;">Order Summary:</div>
+</section>
+
+    <!-- CONTACT TAB -->
+<section id="contact" class="tab-section">
+    <div class="container">
+        <div class="text-center mb-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/563/563991.png" alt="Cafe Logo" style="width:80px; margin-bottom:18px;">
+            <div class="contact-header mx-auto mb-3 p-4 d-flex flex-column align-items-center">
+                <span style="font-size:2.5rem; color:#2563eb;">
+                    <i class="bi bi-envelope-fill"></i>
+                </span>
+                <h1 class="mb-1" style="color:#000000;">Contact Us</h1>
+                <p class="mb-0" style="color:#000000;">If you have any concerns/questions, please dont hesitate to contact us!</p>
+            </div>
+        </div>
+        <div class="row text-center justify-content-center g-4">
+            <div class="col-md-4">
+                <div class="contact-card p-4 h-100 d-flex flex-column justify-content-center align-items-center">
+                    <span style="font-size:2rem; color:#000000;"><i class="bi bi-geo-alt-fill"></i></span>
+                    <h5 class="mt-2 mb-1">Our Location</h5>
+                    <p>123 Paris Street, Makati City, PH</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="contact-card p-4 h-100 d-flex flex-column justify-content-center align-items-center">
+                    <span style="font-size:2rem; color:#000000;"><i class="bi bi-telephone-fill"></i></span>
+                    <h5 class="mt-2 mb-1">Phone Numbers</h5>
+                    <p>+63 912 345 6789<br>(02) 8901 2345</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="contact-card p-4 h-100 d-flex flex-column justify-content-center align-items-center">
+                    <span style="font-size:2rem; color:#000000;"><i class="bi bi-envelope-fill"></i></span>
+                    <h5 class="mt-2 mb-1">Email Addresses/socials</h5>
+                    <p>support@cafedereyes.com<br>info@cafedereyes.com</p>
+                    <p>
+                        <i class="bi bi-instagram" style="font-size:1.3rem; color:#000;"></i> @Cafe_dereyes
+                    </p>
+                    <p>
+                        <i class="bi bi-facebook" style="font-size:1.3rem; color:#000;"></i> CafeDeReyes
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="contact-timebar mt-4 mx-auto text-center p-2 rounded">
+            <span style="color:#000000;"><i class="bi bi-clock-fill"></i></span>
+            <span style="color:#141414;">Open Daily: 9:00 AM - 11:00 PM</span>
+        </div>
+    </div>
+</section>
+
+
+<py-script src="main.py"></py-script>
+</body>
+</html>

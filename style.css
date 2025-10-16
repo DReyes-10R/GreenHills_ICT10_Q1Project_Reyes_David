@@ -1,0 +1,139 @@
+body {
+    background: linear-gradient(120deg, #571D0D 0%, #CB844E 100%);
+}
+
+.header {
+    background: linear-gradient(90deg, #b1957d 80%, #F9DAB4 100%);
+    color: #000000;
+    border-radius: 10px;
+    padding: 30px 0;
+    margin-bottom: 20px;
+}
+
+.menu-table {
+    background: #fff;
+    border-radius: 10px;
+}
+
+.info-section {
+    background: #e3eafc;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.btn-custom {
+    background: #23395d;
+    color: #fff;
+}
+
+.order-form {
+    background-color: #fffaf0;
+    border: 2px solid #b1957d;
+}
+
+#orderSummary {
+    border: 2px dashed #23395d;
+    width: 85%;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    margin-right: 10px;
+}
+
+.menu-table h4, .order-form h4 {
+    font-weight: bold;
+    color: #0f0f0f;
+}
+
+.info-section h4 {
+    color: #000000;
+    font-weight: bold;
+}
+
+.tab-section {
+    display: none;
+}
+:target {
+    display: block;
+}
+
+.contact-header {
+    background: rgba(255,255,255,0.6);
+    border-radius: 12px;
+    max-width: 500px;
+}
+
+footer {
+    background: linear-gradient(90deg, #571D0D 0%, #CB844E 100%);
+    color: #fff;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+    padding: 18px 0;
+    margin-top: 32px;
+}
+
+.menu-list label {
+    font-size: 1.05rem;
+}
+
+.menu-list img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    background: #f5f5f5;
+}
+
+#orderSummary {
+    border: 2px dashed #050505;
+    color: #000000;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.btn-primary {
+    background: #161616;
+    border: none;
+}
+
+.contact-header {
+    background: linear-gradient(90deg, #e3eafc 80%, #f9f9ff 100%);
+    border-radius: 16px;
+    max-width: 600px;
+    box-shadow: 0 2px 12px rgba(37,99,235,0.07);
+}
+
+.contact-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(37,99,235,0.07);
+    min-height: 220px;
+    width: 100%;
+    max-width: 340px;
+    margin: auto;
+    color: #080808;
+}
+
+.contact-card h5 {
+    color: #000000 !important;
+    font-weight: bold;
+}
+
+.contact-timebar {
+    background: #e3eafc;
+    border-radius: 12px;
+    max-width: 400px;
+    box-shadow: 0 2px 8px rgba(37,99,235,0.07);
+    font-size: 1.1rem;
+}
